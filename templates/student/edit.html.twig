@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Student{% endblock %}
+
+{% block body %}
+<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+    <h1>Edit Student</h1>
+    </header>
+
+ {{ form_start(form) }}
+     
+ <div class="form-group">
+   {{ form_label(form.FirstName) }}
+    {{ form_widget(form.FirstName, { attr: { 'class': 'form-control' }}) }}
+</div>
+
+ <div class="form-group">
+   {{ form_label(form.LastName) }}
+    {{ form_widget(form.LastName, { attr: { 'class': 'form-control' }}) }}
+</div>
+
+ <div class="form-group">
+   {{ form_label(form.NumEtud) }}
+    {{ form_widget(form.NumEtud, { attr: { 'class': 'form-control' }}) }}
+</div>
+
+  
+ <div class="form-group">
+<button type="submit" class="btn btn-primary m-1">Edit</button>
+</div>
+{{ form_end(form) }}
+
+    <a class="btn btn-info m-1" href="{{ path('app_student_index') }}">back to list</a>
+
+    {{ include('student/_delete_form.html.twig') }}
+{% endblock %}

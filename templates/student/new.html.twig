@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Student{% endblock %}
+
+{% block body %}
+<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+       <h1>Create new Student</h1>
+    </header>
+ 
+ {{ form_start(form) }}
+     
+ <div class="form-group">
+   {{ form_label(form.FirstName) }}
+    {{ form_widget(form.FirstName, { attr: { 'class': 'form-control' }}) }}
+</div>
+
+ <div class="form-group">
+   {{ form_label(form.LastName) }}
+    {{ form_widget(form.LastName, { attr: { 'class': 'form-control' }}) }}
+</div>
+
+ <div class="form-group">
+   {{ form_label(form.NumEtud) }}
+    {{ form_widget(form.NumEtud, { attr: { 'class': 'form-control' }}) }}
+</div>
+
+  
+ <div class="form-group">
+<button type="submit" class="btn btn-primary m-1">Create</button>
+</div>
+{{ form_end(form) }}
+
+
+    <a class="btn btn-info m-1" href="{{ path('app_student_index') }}">back to list</a>
+
+
+
+
+
+
+{% endblock %}
