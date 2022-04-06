@@ -1,0 +1,31 @@
+API REST STUDENT
+
+API Title : Student API
+Version : 1.0
+
+Purpose:
+This api give you the list of students of one department.
+
+Endpoint: /students/:DepartmentName/
+Method : GET
+Authentification : None
+
+How to use :
+You need to change the department name with the one you want and then, call the url.
+
+Examples :
+Use your web browser to visit the following page :
+http://localhost:8000/students/Technology
+http://127.0.0.1:8000/students/Science
+
+If you ask for the Technology department the result must be (raw data):
+[{"id":2,"FirstName":"Paul","LastName":"Patrick"},{"id":3,"FirstName":"Marc","LastName":"Lebron"}]
+
+You can also use your terminal:
+curl http://localhost:8000/students/Technology
+
+Please note that the port of your local installation can be different from "8000". 
+
+Error :
+If the department you ask for does not exists you will have the following error message :
+"Call to a member function getId() on null"

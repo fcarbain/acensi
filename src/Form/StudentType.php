@@ -15,6 +15,7 @@ class StudentType extends AbstractType
             ->add('FirstName')
             ->add('LastName')
             ->add('NumEtud')
+            ->add('department')
         ;
     }
 

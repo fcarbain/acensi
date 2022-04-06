@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Welcome to the student app !</h1>
+
+   You can :
+    <ul>
+        <li>Go add or edit some students ! <code><a href="{{ path('app_student_index') }}">Manage students</a></code></li>
+        <li>See the API documentation <code><a href="/API_Documentation_Student.txt">Go see the txt file</a></code></li>
+    </ul>
+</div>
+{% endblock %}

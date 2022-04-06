@@ -25,7 +25,7 @@
                 <td>{{ student.NumEtud }}</td>
                 <td>
                     <a class="btn btn-secondary" href="{{ path('app_student_show', {'id': student.id}) }}">show</a>
-                    <a class="btn btn-warning" href="{{ path('app_student_edit', {'id': student.id}) }}">edit</a>
+                    <a class="btn btn-primary" href="{{ path('app_student_edit', {'id': student.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -36,5 +36,5 @@
         </tbody>
     </table>
 
-    <a class="btn btn-primary m-1" href="{{ path('app_student_new') }}">Create new</a>
+    <a class="btn btn-success m-1" href="{{ path('app_student_new') }}">Create new</a>
 {% endblock %}
